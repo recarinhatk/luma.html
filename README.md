@@ -1,2 +1,323 @@
+[luma_editavel_canva.html](https://github.com/user-attachments/files/29301398/luma_editavel_canva.html)
 # luma_editavel_canva.html
 Flyer bolsinhas terapêuticas de sementes da marca LUMA
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMA — natureza que cuida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F0E8; --dark:#2D3B35; --card:#FDFAF5; --card2:#EEE8F8;
+    --gold:#B8944A; --green:#4A7C59; --terra:#C77B52;
+    --tdark:#2C2C2C; --tmid:#555; --bullet:#7B6EA0; --line:#E0D8F0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#ddd;display:flex;justify-content:center;font-family:'Montserrat',sans-serif;}
+  /* A5 portrait ratio 1:1.4189 → 1240 x 1759 */
+  .page{
+    width:1240px;height:1759px;background:var(--bg);position:relative;overflow:hidden;
+  }
+  .topbar{height:7px;background:var(--gold);}
+  .pad{padding:0 48px;}
+
+  /* HEADER */
+  .header{display:flex;justify-content:space-between;align-items:flex-start;padding:34px 48px 0;}
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand .logo{width:34px;height:44px;}
+  .brand h1{font-weight:700;font-size:46px;letter-spacing:1px;color:var(--dark);line-height:1;}
+  .tagline{text-align:right;}
+  .tagline .t1{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--gold);font-weight:500;}
+  .tagline .t2{font-size:12px;letter-spacing:2px;color:var(--terra);margin-top:4px;}
+  .divider{height:2px;background:var(--gold);margin:20px 48px 0;}
+
+  /* SECTION TITLE */
+  .sec-title{display:flex;align-items:center;gap:14px;padding:24px 48px 0;}
+  .sec-title h2{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--green);white-space:nowrap;}
+  .sec-title .rule{flex:1;height:1px;background:#CCC;}
+  .sec-title .dot{width:13px;height:13px;border-radius:50%;background:var(--terra);}
+
+  /* HERB GRID */
+  .herbs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:18px 48px 0;}
+  .herb{background:var(--card);border-radius:14px;border-left:7px solid var(--bullet);padding:16px 18px;}
+  .herb .h-head{display:flex;align-items:center;gap:10px;}
+  .herb .h-head .ico{width:26px;height:26px;flex:none;}
+  .herb .h-head h3{font-weight:700;font-size:21px;color:var(--terra);letter-spacing:.5px;}
+  .herb .h-rule{height:1px;background:var(--line);margin:10px 0 12px;}
+  .herb p{font-size:18px;line-height:1.35;color:var(--tmid);margin-bottom:10px;}
+  .herb p:last-child{margin-bottom:0;}
+  .herb b{color:var(--green);font-weight:600;}
+
+  /* ESSENCES */
+  .ess-card{background:var(--card2);border-radius:18px;margin:20px 48px 0;padding:30px 30px;
+    display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+  .ess{display:grid;grid-template-columns:42px 1fr;align-items:start;padding:16px 0;}
+  .ess .ico{width:30px;height:30px;margin-top:2px;}
+  .ess .e-name{font-weight:700;font-size:21px;color:var(--tdark);}
+  .ess .e-name .dash{color:var(--terra);font-weight:400;}
+  .ess .e-desc{font-size:20px;line-height:1.3;color:var(--tmid);margin-top:2px;}
+  .ess-col-left{border-right:1px solid #D5CBEA;padding-right:30px;}
+
+  /* DICA */
+  .dica{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:25px;color:var(--terra);padding:40px 80px 0;line-height:1.35;}
+  .dica b{font-style:normal;font-weight:600;color:var(--green);}
+
+  /* FOOTER */
+  .footer{position:absolute;left:0;right:0;bottom:0;background:var(--dark);
+    display:flex;align-items:center;gap:24px;padding:18px 48px;}
+  .footer .qr{width:78px;height:78px;background:#fff;border-radius:6px;flex:none;padding:7px;}
+  .footer .ft{color:#fff;}
+  .footer .ft .l1{font-size:21px;font-weight:400;}
+  .footer .ft .l1 b{font-weight:700;}
+  .footer .ft .l2{font-size:17px;font-weight:600;color:var(--gold);margin-top:4px;letter-spacing:1px;}
+  .footer .ft .l3{font-size:13px;color:#aaa;margin-top:3px;letter-spacing:1px;}
+  .footbar{position:absolute;left:0;right:0;bottom:0;height:7px;background:var(--gold);}
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="LUMA — Ervas & Essências">
+  <div class="topbar"></div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 34 44">
+        <path d="M17 4 C9 14, 9 30, 17 40 C25 30, 25 14, 17 4 Z" fill="#6B9362"/>
+        <path d="M17 8 L17 38" stroke="#4A7C59" stroke-width="2"/>
+      </svg>
+      <h1>LUMA</h1>
+    </div>
+    <div class="tagline">
+      <div class="t1">natureza que cuida</div>
+      <div class="t2">O VERDE A SERVIÇO DO SEU BEM-ESTAR</div>
+    </div>
+  </div>
+  <div class="divider"></div>
+
+  <!-- ERVAS -->
+  <div class="sec-title">
+    <h2>Ervas naturais &amp; seus benefícios</h2>
+    <div class="rule"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="herbs">
+    <!-- CAMOMILA -->
+    <div class="herb">
+      <div class="h-head">
+        <svg class="ico" viewBox="0 0 40 40">
+          <g fill="#FBFBF5" stroke="#E0DCC8">
+            <ellipse cx="20" cy="6" rx="4" ry="8"/><ellipse cx="20" cy="34" rx="4" ry="8"/>
+            <ellipse cx="6" cy="20" rx="8" ry="4"/><ellipse cx="34" cy="20" rx="8" ry="4"/>
+            <ellipse cx="10" cy="10" rx="4" ry="8" transform="rotate(45 10 10)"/>
+            <ellipse cx="30" cy="10" rx="4" ry="8" transform="rotate(-45 30 10)"/>
+            <ellipse cx="10" cy="30" rx="4" ry="8" transform="rotate(-45 10 30)"/>
+            <ellipse cx="30" cy="30" rx="4" ry="8" transform="rotate(45 30 30)"/>
+          </g>
+          <circle cx="20" cy="20" r="6" fill="#E8C84A"/>
+        </svg>
+        <h3>CAMOMILA</h3>
+      </div>
+      <div class="h-rule"></div>
+      <p><b>Ação:</b> calmante, relaxante, levemente analgésica.</p>
+      <p><b>Indicação:</b> ansiedade, insônia, cólicas.</p>
+    </div>
+
+    <!-- LAVANDA -->
+    <div class="herb">
+      <div class="h-head">
+        <svg class="ico" viewBox="0 0 40 40">
+          <line x1="20" y1="38" x2="20" y2="14" stroke="#4A7C59" stroke-width="2"/>
+          <g fill="#9B8AC4">
+            <ellipse cx="16" cy="10" rx="3" ry="5"/><ellipse cx="24" cy="10" rx="3" ry="5"/>
+            <ellipse cx="20" cy="6" rx="3" ry="5"/><ellipse cx="16" cy="18" rx="3" ry="5"/>
+            <ellipse cx="24" cy="18" rx="3" ry="5"/><ellipse cx="20" cy="14" rx="3" ry="5"/>
+          </g>
+        </svg>
+        <h3>LAVANDA</h3>
+      </div>
+      <div class="h-rule"></div>
+      <p><b>Ação:</b> calmante, ansiolítica, ajuda no sono.</p>
+      <p><b>Indicação:</b> tensão, dor de cabeça, insônia.</p>
+    </div>
+
+    <!-- ERVA-DOCE -->
+    <div class="herb">
+      <div class="h-head">
+        <svg class="ico" viewBox="0 0 40 40">
+          <path d="M20 3 L24 15 L37 15 L26 23 L30 36 L20 28 L10 36 L14 23 L3 15 L16 15 Z" fill="#A6754E"/>
+          <circle cx="20" cy="20" r="5" fill="#8A5E3C"/>
+        </svg>
+        <h3>ERVA-DOCE</h3>
+      </div>
+      <div class="h-rule"></div>
+      <p><b>Ação:</b> antiespasmódica.</p>
+      <p><b>Indicação:</b> cólicas, gases, desconforto abdominal.</p>
+    </div>
+
+    <!-- ERVA-CIDREIRA -->
+    <div class="herb">
+      <div class="h-head">
+        <svg class="ico" viewBox="0 0 40 40">
+          <path d="M14 30 C6 24, 8 12, 18 10 C16 20, 20 28, 14 30 Z" fill="#7FB58A"/>
+          <path d="M26 30 C34 24, 32 12, 22 10 C24 20, 20 28, 26 30 Z" fill="#6B9362"/>
+        </svg>
+        <h3>ERVA-CIDREIRA</h3>
+      </div>
+      <div class="h-rule"></div>
+      <p><b>Ação:</b> calmante, relaxante muscular leve.</p>
+      <p><b>Indicação:</b> ansiedade, irritabilidade, tensão.</p>
+    </div>
+
+    <!-- ALECRIM -->
+    <div class="herb">
+      <div class="h-head">
+        <svg class="ico" viewBox="0 0 40 40">
+          <line x1="20" y1="38" x2="20" y2="4" stroke="#4A7C59" stroke-width="2"/>
+          <g stroke="#6B9362" stroke-width="2">
+            <line x1="20" y1="10" x2="10" y2="6"/><line x1="20" y1="10" x2="30" y2="6"/>
+            <line x1="20" y1="18" x2="10" y2="14"/><line x1="20" y1="18" x2="30" y2="14"/>
+            <line x1="20" y1="26" x2="10" y2="22"/><line x1="20" y1="26" x2="30" y2="22"/>
+            <line x1="20" y1="34" x2="11" y2="30"/><line x1="20" y1="34" x2="29" y2="30"/>
+          </g>
+        </svg>
+        <h3>ALECRIM</h3>
+      </div>
+      <div class="h-rule"></div>
+      <p><b>Ação:</b> estimulante, melhora a circulação.</p>
+      <p><b>Indicação:</b> cansaço, dores musculares, falta de energia.</p>
+    </div>
+
+    <!-- HORTELÃ -->
+    <div class="herb">
+      <div class="h-head">
+        <svg class="ico" viewBox="0 0 40 40">
+          <path d="M20 4 C13 12, 13 22, 20 26 C27 22, 27 12, 20 4 Z" fill="#7FB58A"/>
+          <path d="M10 16 C6 24, 10 32, 18 32 C16 24, 14 18, 10 16 Z" fill="#6B9362"/>
+          <path d="M30 16 C34 24, 30 32, 22 32 C24 24, 26 18, 30 16 Z" fill="#6B9362"/>
+        </svg>
+        <h3>HORTELÃ</h3>
+      </div>
+      <div class="h-rule"></div>
+      <p><b>Ação:</b> refrescante, analgésica leve, descongestionante.</p>
+      <p><b>Indicação:</b> dor de cabeça, tensão, congestão nasal.</p>
+    </div>
+  </div>
+
+  <!-- ESSÊNCIAS -->
+  <div class="sec-title">
+    <h2>Essências aromáticas</h2>
+    <div class="rule"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="ess-card">
+    <div class="ess-col-left">
+      <!-- Lavanda -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><line x1="20" y1="38" x2="20" y2="14" stroke="#4A7C59" stroke-width="2"/><g fill="#9B8AC4"><ellipse cx="16" cy="10" rx="3" ry="5"/><ellipse cx="24" cy="10" rx="3" ry="5"/><ellipse cx="20" cy="6" rx="3" ry="5"/><ellipse cx="20" cy="14" rx="3" ry="5"/></g></svg>
+        <div><div class="e-name">Lavanda <span class="dash">—</span></div><div class="e-desc">suave e relaxante; calma, conforto e bem-estar.</div></div>
+      </div>
+      <!-- Capim-limão -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><g stroke="#8FA98A" stroke-width="3" fill="none"><line x1="14" y1="36" x2="10" y2="4"/><line x1="20" y1="36" x2="20" y2="4"/><line x1="26" y1="36" x2="30" y2="4"/></g></svg>
+        <div><div class="e-name">Capim-limão <span class="dash">—</span></div><div class="e-desc">fresco e cítrico; tranquilidade e equilíbrio.</div></div>
+      </div>
+      <!-- Bamboo -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><rect x="13" y="4" width="6" height="32" fill="#7FB58A"/><rect x="22" y="4" width="6" height="32" fill="#6B9362"/><line x1="11" y1="14" x2="30" y2="14" stroke="#FAF6EE" stroke-width="2"/><line x1="11" y1="26" x2="30" y2="26" stroke="#FAF6EE" stroke-width="2"/></svg>
+        <div><div class="e-name">Bamboo <span class="dash">—</span></div><div class="e-desc">leve e refrescante; limpeza, frescor e harmonia.</div></div>
+      </div>
+      <!-- Cravo e Canela -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><rect x="13" y="4" width="7" height="32" rx="3" fill="#B5713E"/><rect x="21" y="4" width="7" height="32" rx="3" fill="#8A5E3C"/></svg>
+        <div><div class="e-name">Cravo e Canela <span class="dash">—</span></div><div class="e-desc">quente e acolhedor; puro aconchego.</div></div>
+      </div>
+      <!-- Limão Siciliano -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><ellipse cx="19" cy="22" rx="14" ry="11" fill="#E8C84A" stroke="#C9A813" stroke-width="2"/><line x1="30" y1="13" x2="35" y2="7" stroke="#4A7C59" stroke-width="2"/></svg>
+        <div><div class="e-name">Limão Siciliano <span class="dash">—</span></div><div class="e-desc">cítrico e energizante; leveza e renovação.</div></div>
+      </div>
+      <!-- Flor de Cerejeira -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><g fill="#E89CB0"><circle cx="20" cy="11" r="6"/><circle cx="29" cy="18" r="6"/><circle cx="26" cy="29" r="6"/><circle cx="14" cy="29" r="6"/><circle cx="11" cy="18" r="6"/></g><circle cx="20" cy="20" r="4" fill="#F5D76E"/></svg>
+        <div><div class="e-name">Flor de Cerejeira <span class="dash">—</span></div><div class="e-desc">delicado e floral; suavidade e serenidade.</div></div>
+      </div>
+      <!-- Melaleuca -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><path d="M8 32 C6 18, 18 6, 34 8 C32 24, 20 34, 8 32 Z" fill="#6B9362"/><line x1="12" y1="28" x2="30" y2="12" stroke="#4A7C59" stroke-width="2"/></svg>
+        <div><div class="e-name">Melaleuca <span class="dash">—</span></div><div class="e-desc">herbal e fresco; purificação e renovação.</div></div>
+      </div>
+    </div>
+
+    <div class="ess-col-right">
+      <!-- Alecrim -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><line x1="20" y1="38" x2="20" y2="4" stroke="#4A7C59" stroke-width="2"/><g stroke="#6B9362" stroke-width="2"><line x1="20" y1="12" x2="11" y2="8"/><line x1="20" y1="12" x2="29" y2="8"/><line x1="20" y1="22" x2="11" y2="18"/><line x1="20" y1="22" x2="29" y2="18"/><line x1="20" y1="32" x2="12" y2="28"/><line x1="20" y1="32" x2="28" y2="28"/></g></svg>
+        <div><div class="e-name">Alecrim <span class="dash">—</span></div><div class="e-desc">revigorante e estimulante; energia e foco.</div></div>
+      </div>
+      <!-- Baby -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><circle cx="15" cy="22" r="10" fill="#CDE3EC"/><circle cx="25" cy="16" r="10" fill="#B8D8E8"/><circle cx="22" cy="24" r="9" fill="#DCEAF2"/></svg>
+        <div><div class="e-name">Baby <span class="dash">—</span></div><div class="e-desc">suave e delicado; carinho e sensação de limpeza.</div></div>
+      </div>
+      <!-- Green Wood -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><polygon points="20,4 9,18 31,18" fill="#4A7C59"/><polygon points="20,12 6,30 34,30" fill="#6B9362"/><rect x="17" y="30" width="6" height="6" fill="#A6754E"/></svg>
+        <div><div class="e-name">Green Wood <span class="dash">—</span></div><div class="e-desc">verde e amadeirado; equilíbrio e natureza.</div></div>
+      </div>
+      <!-- Eucalipto e Hortelã -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><line x1="8" y1="34" x2="32" y2="6" stroke="#4A7C59" stroke-width="2"/><g fill="#8FA98A"><circle cx="13" cy="27" r="6"/><circle cx="21" cy="20" r="6"/><circle cx="29" cy="13" r="6"/></g></svg>
+        <div><div class="e-name">Eucalipto e Hortelã <span class="dash">—</span></div><div class="e-desc">refrescante; conforto respiratório.</div></div>
+      </div>
+      <!-- Alfazema Provençal -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><line x1="20" y1="38" x2="20" y2="14" stroke="#4A7C59" stroke-width="2"/><g fill="#7B6EA0"><ellipse cx="16" cy="10" rx="3" ry="5"/><ellipse cx="24" cy="10" rx="3" ry="5"/><ellipse cx="20" cy="6" rx="3" ry="5"/><ellipse cx="20" cy="14" rx="3" ry="5"/></g></svg>
+        <div><div class="e-name">Alfazema Provençal <span class="dash">—</span></div><div class="e-desc">floral clássico; ambiente tranquilo e acolhedor.</div></div>
+      </div>
+      <!-- Madeira Nobre -->
+      <div class="ess">
+        <svg class="ico" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="#A6754E"/><circle cx="20" cy="20" r="10" fill="none" stroke="#8A5E3C" stroke-width="2"/><circle cx="20" cy="20" r="5" fill="none" stroke="#8A5E3C" stroke-width="2"/></svg>
+        <div><div class="e-name">Madeira Nobre <span class="dash">—</span></div><div class="e-desc">amadeirado sofisticado; aconchego e elegância.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DICA -->
+  <div class="dica"><b>DICA:</b> Para reavivar o aroma depois de um tempo de uso, borrife a essência de sua preferência.</div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="qr">
+      <svg viewBox="0 0 64 64" width="64" height="64">
+        <rect width="64" height="64" fill="#fff"/>
+        <g fill="#2D3B35">
+          <rect x="4" y="4" width="16" height="16"/><rect x="44" y="4" width="16" height="16"/>
+          <rect x="4" y="44" width="16" height="16"/>
+          <rect x="8" y="8" width="8" height="8" fill="#fff"/><rect x="48" y="8" width="8" height="8" fill="#fff"/>
+          <rect x="8" y="48" width="8" height="8" fill="#fff"/>
+          <rect x="26" y="6" width="4" height="4"/><rect x="34" y="6" width="4" height="4"/>
+          <rect x="26" y="26" width="4" height="4"/><rect x="34" y="34" width="4" height="4"/>
+          <rect x="44" y="26" width="4" height="4"/><rect x="52" y="34" width="4" height="4"/>
+          <rect x="6" y="26" width="4" height="4"/><rect x="14" y="34" width="4" height="4"/>
+          <rect x="44" y="44" width="4" height="4"/><rect x="52" y="52" width="4" height="4"/>
+          <rect x="34" y="44" width="4" height="4"/><rect x="44" y="52" width="4" height="4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="ft">
+      <div class="l1">Siga <b>LUMA</b> no Instagram</div>
+      <div class="l2">@LUMABOLSASEMENTES</div>
+      <div class="l3">APONTE A CÂMERA PARA O QR CODE</div>
+    </div>
+  </div>
+  <div class="footbar"></div>
+</div>
+</body>
+</html>
